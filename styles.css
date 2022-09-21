@@ -37,6 +37,11 @@ body {
   --light-blue: hsl(210, 46%, 95%);
 }
 
+/* set h2 for html accessibility issues */
+h2 {
+  display: none;
+}
+
 /* Inherit fonts for button&input */
 input,
 button,
@@ -115,7 +120,7 @@ main {
 /* Profile */
 .box__profile {
   display: flex;
-  margin-bottom: 1.125rem;
+  margin-bottom: 1rem;
 }
 
 .box__user-img {
@@ -153,6 +158,7 @@ main {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .box__user-info--light,
@@ -162,6 +168,14 @@ main {
 
 .box__quote {
   color: var(--dark-gray-blue);
+}
+
+.box__quote::before {
+  content: "\201C";
+}
+
+.box__quote::after {
+  content: "\201D";
 }
 
 .box__quote--light {
